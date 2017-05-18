@@ -40,11 +40,12 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem "factory_girl_rails", "~> 4.0"
+  gem 'faker'
+  gem 'table_print'
 end
 
 group :test do
   gem 'database_cleaner'
-  gem 'faker'
 end
 
 group :development do
