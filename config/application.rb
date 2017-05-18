@@ -27,5 +27,17 @@ module Flix
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    console do
+      ActiveRecord::Base.connection
+    end
+
+    config.generators do |g|
+      g.assets  false
+      g.helper false
+      g.stylesheets false
+      g.view_specs false
+      g.helper_specs false
+    end
   end
 end
