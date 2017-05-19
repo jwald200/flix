@@ -1,9 +1,16 @@
 h1 Movies
 
-ul
-  - @movies.each do |movie|
-    li 
-      strong> = movie.title
-      = "(#{movie.rating}): "
-      = number_to_currency movie.total_gross
-  
+- @movies.each do |movie|
+    header: h2 = movie.title
+    p = movie.description
+    
+    table
+      tr
+        th Released:
+        td = movie.released_on
+      tr
+        th Rating:
+        td = movie.rating
+      tr
+        th Todal Gross:
+        td = number_to_currency movie.total_gross
