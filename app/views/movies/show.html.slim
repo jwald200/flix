@@ -1,0 +1,16 @@
+h1 = @movie.title
+
+article
+  header
+    h1 = @movie.title
+  h2 Description
+  p = @movie.description
+  
+  h3 Rating
+  p = @movie.rating
+  
+  h3 Released On
+  p = @movie.released_on
+  
+  h3 Total Gross
+  p = format_total_gross(@movie)
