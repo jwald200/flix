@@ -1,7 +1,7 @@
 h1 = 'Movie'.pluralize(@movies.count)
 
 - @movies.each do |movie|
-    header: h2 = movie.title
+    header: h2 = link_to(movie.title, movie)
     p = truncate(movie.description, length: 40, separator: ' ')
     
     table

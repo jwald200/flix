@@ -1,5 +1,3 @@
-h1 = @movie.title
-
 article
   header
     h1 = @movie.title
@@ -14,3 +12,5 @@ article
   
   h3 Total Gross
   p = format_total_gross(@movie)
+
+= link_to('All Movies', root_path)
