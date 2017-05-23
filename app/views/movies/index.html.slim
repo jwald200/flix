@@ -1,16 +1,16 @@
-h1 Movies
+h1 = 'Movie'.pluralize(@movies.count)
 
 - @movies.each do |movie|
     header: h2 = movie.title
-    p = movie.description
+    p = truncate(movie.description, length: 40, separator: ' ')
     
     table
       tr
         th Released:
-        td = movie.released_on
+        td = "#{movie.released_on} (#{time_ago_in_words(movie.released_on)} ago)"
       tr
         th Rating:
         td = movie.rating
       tr
         th Todal Gross:
-        td = number_to_currency movie.total_gross
+        td = format_total_gross(movie)
